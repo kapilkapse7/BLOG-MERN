@@ -18,7 +18,7 @@ app.use("/posts",postRoutes); //using this to acess route req through routes fil
 const password = encodeURIComponent("kapil123");
 const CONNECTION_URL=`mongodb+srv://kapilkapse007:${password}@cluster0.p39pqat.mongodb.net/` 
 
-const PORT = 8000; //port connection
+const PORT = process.env.PORT|| 5000
 
 mongoose.connect(CONNECTION_URL,{useNewUrlParser:true})
 .then(()=>{app.listen(PORT,()=>{console.log(`App is running on port : ${PORT}` )})}) //show sucess when sucessfull
