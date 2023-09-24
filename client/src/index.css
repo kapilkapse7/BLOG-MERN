@@ -1,0 +1,15 @@
+body {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    background-image: url('../src/images/pupbl.jpeg'); /* Replace with the path to your image */
+    background-size: cover; /* Adjust this property as needed */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the background fixed as the page scrolls */
+
+
+    background-size: 100% 100%; /* 100% width and 100% height of the viewport */
+  
+}
+
+
+

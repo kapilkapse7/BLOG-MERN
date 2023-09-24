@@ -21,7 +21,27 @@ export const createPost =(post)=>async(dispatch)=>{
         dispatch({type:"CREATE",payload:data})
     } catch (error) {
         
-        console.log("Action posts error is here")
+        console.log(error)
         
     }
 }
+
+// export const deletePost = (post)=>async(dispatch)=>{
+//     try {
+//         const{ data }= await api.deletePost(post);
+//         dispatch({type:"DELETE",payload:data})
+        
+//     } catch (error) {
+//         console.log(error)
+//     }
+
+
+    export const updatePost = (id, post) => async(dispatch)=>{
+        try {
+            const { data } = await api.updatePost(id,post);
+            dispatch({type:"UPDATE",payload: data});
+        } catch (error) {
+            console.log(error.message);
+            
+        }
+    }
