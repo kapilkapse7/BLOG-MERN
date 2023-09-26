@@ -25,6 +25,7 @@ const Form =( {currentId,setCurrentId} )=>{
 
         if(currentId!==0){
             dispatch(updatePost(currentId , postData));
+            
             console.log(postData);
 
         }else{

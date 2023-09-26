@@ -8,10 +8,11 @@ export default (posts=[],action)=>{
 
         case "CREATE":
             return [ ...posts,action.payload];
-            console.log([ ...posts,action.payload])
 
-        
-    
+        case "DELETE":
+            return posts.filter((post)=>post._id !==action.payload);
+        case "UPDATE":
+            return  posts.map((post)=>post._id === action.payload._id ? action.payload : post);
         default:
             return posts;
     }
